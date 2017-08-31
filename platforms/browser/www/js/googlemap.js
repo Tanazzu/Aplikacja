@@ -40,10 +40,7 @@ function onDeviceReady() {
 
 function map (lat, lon) {
     var latLon = lat + ',' + lon;
-
-    if (device.platform.toUpperCase() === "ANDROID") {
+    
         window.open("geo:" + latLon, "_system");
-    } else if (device.platform.toUpperCase() === "IOS") {
-        window.open("http://maps.apple.com/?sll=" + latLon + "&z=100&t=k", "_system");
-    }
+   
 }
